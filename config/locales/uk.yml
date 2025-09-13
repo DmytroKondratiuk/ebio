@@ -1,0 +1,13 @@
+uk:
+  app_name: eBio
+  add_item: Додати позицію
+
+  catalogs:
+    title: Перелік позицій
+    fields:
+      price: Ціна
+      quantity: Кількість
+
+    create: Позиція успішно створена.
+    update: Позиція успішно оновлена.
+    destroy: Позиція успішно видалена.

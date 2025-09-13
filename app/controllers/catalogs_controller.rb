@@ -3,7 +3,7 @@ class CatalogsController < ApplicationController
 
   # GET /catalogs or /catalogs.json
   def index
-    @catalogs = Catalog.all
+    @catalogs = Catalog.where(active: true).all
   end
 
   # GET /catalogs/1 or /catalogs/1.json
@@ -25,7 +25,7 @@ class CatalogsController < ApplicationController
 
     respond_to do |format|
       if @catalog.save
-        format.html { redirect_to @catalog, notice: "Catalog was successfully created." }
+        format.html { redirect_to @catalog, notice: I18n.t("catalogs.created"), status: :see_other }
         format.json { render :show, status: :created, location: @catalog }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class CatalogsController < ApplicationController
   def update
     respond_to do |format|
       if @catalog.update(catalog_params)
-        format.html { redirect_to @catalog, notice: "Catalog was successfully updated.", status: :see_other }
+        format.html { redirect_to @catalog, notice: I18n.t("catalogs.updated"), status: :see_other }
         format.json { render :show, status: :ok, location: @catalog }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class CatalogsController < ApplicationController
     @catalog.destroy!
 
     respond_to do |format|
-      format.html { redirect_to catalogs_path, notice: "Catalog was successfully destroyed.", status: :see_other }
+      format.html { redirect_to catalogs_path, notice: I18n.t("catalogs.destroyed"), status: :see_other }
       format.json { head :no_content }
     end
   end

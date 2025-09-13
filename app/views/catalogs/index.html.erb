@@ -2,15 +2,18 @@
 
 <% content_for :title, "Catalogs" %>
 
-<h1>Catalogs</h1>
+<h1><%= I18n.t("catalogs.title") %></h1>
 
 <div id="catalogs">
-  <% @catalogs.each do |catalog| %>
-    <%= render catalog %>
-    <p>
-      <%= link_to "Show this catalog", catalog %>
-    </p>
-  <% end %>
-</div>
+  <div class="row">
+    <div class="col">
+      <% @catalogs.each do |catalog| %>
+        <%= render "catalogs/catalog_card", catalog: catalog %>
+      <% end %>
+    </div>
 
-<%= link_to "New catalog", new_catalog_path %>
+    <div class="col">
+      <h2><%= I18n.t("catalogs.title") %></h2>
+    </div>
+  </div>
+</div>

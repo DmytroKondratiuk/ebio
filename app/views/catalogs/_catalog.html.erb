@@ -1,2 +1,26 @@
 <div id="<%= dom_id catalog %>">
+  <div class="card border-info mb-1" style="width: 50%;">
+    <div class="card-header">
+       
+       <small class="text-muted"><%= catalog.created_at.to_s %></small>
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= link_to catalog.product_name, catalog, class: 'text-decoration-none' %>
+      </h5>
+      <p class="card-text"><%= catalog.description %></p>
+
+      <hr />
+
+      <div class="row">
+        <div class="col">
+          <strong><%= I18n.t("catalogs.fields.price") %>:</strong>
+          <%= "#{catalog.price}, #{catalog.currency}" %>
+        </div>
+        <div class="col">
+          <strong><%= I18n.t("catalogs.fields.quantity") %>:</strong> <%= catalog.quantity %>
+        </div>
+    </div>
+  </div>
 </div>
