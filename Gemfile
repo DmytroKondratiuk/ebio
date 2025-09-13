@@ -66,9 +66,13 @@ end
 
 gem "react-rails", "~> 3.2"
 
-# https://github.com/fnando/i18n-js
-gem "i18n-js", require: false
-
 # collection of all information for every country in the ISO 3166 standard
 # https://github.com/countries/countries
 gem "countries", require: "countries/global"
+
+# https://github.com/fnando/i18n-js
+gem "i18n-js", "~> 3.0"
+
+# Generates javascript file that defines all Rails named routes as javascript helpers
+# https://github.com/railsware/js-routes
+gem "js-routes"
