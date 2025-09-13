@@ -2,7 +2,6 @@ en:
   app_name: eBio
   add_item: Add item
 
-
   catalogs:
     title: Items list
     fields:

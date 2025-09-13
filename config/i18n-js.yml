@@ -1,0 +1,7 @@
+translations:
+  - file: "public/javascripts/translations.json"
+    only: ["en", "uk"]
+    json: true
+    segments: true
+    namespace: false
+    pretty_print: true

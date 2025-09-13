@@ -1,5 +1,6 @@
 import React from 'react'
-import I18n from 'i18n-js';
+import I18n from '../i18n';
+
 import { Card, Typography, Divider, Row, Col, Tag } from 'antd'
 import { ShoppingCartOutlined, DollarOutlined } from '@ant-design/icons'
 import { catalog_path } from '../routes';
@@ -29,14 +30,14 @@ const CatalogCard = ({ catalog }) => {
         <Col span={12}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <DollarOutlined />
-            <Text strong>`${I18n.t('catalog.price')}:`</Text>
+            <Text strong>{`${I18n.t('catalogs.fields.price')}:`}</Text>
             <Tag color="blue">{`${catalog.price} ${catalog.currency}`}</Tag>
           </div>
         </Col>
         <Col span={12}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <ShoppingCartOutlined />
-            <Text strong>`${I18n.t('catalog.quantity')}:`</Text>
+            <Text strong>{`${I18n.t('catalogs.fields.quantity')}:`}</Text>
             <Tag color="green">{catalog.quantity}</Tag>
           </div>
         </Col>

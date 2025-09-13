@@ -122,14 +122,12 @@ GEM
     fugit (1.11.2)
       et-orbi (~> 1, >= 1.2.11)
       raabro (~> 1.4)
-    glob (0.4.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    i18n-js (4.2.3)
-      glob (>= 0.4.0)
-      i18n
+    i18n-js (3.9.2)
+      i18n (>= 0.6.6)
     io-console (0.8.1)
     irb (1.15.2)
       pp (>= 0.6.0)
@@ -398,7 +396,7 @@ DEPENDENCIES
   countries
   cssbundling-rails
   debug
-  i18n-js
+  i18n-js (~> 3.0)
   jbuilder
   js-routes
   jsbundling-rails
