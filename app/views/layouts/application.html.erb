@@ -27,14 +27,14 @@
         <div class="col-md-1 mb-2 mb-md-0"></div>
         <div class="col-md-3 mb-2 mb-md-0"> 
           <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none display-6"> 
-            eBio
+            <%= I18n.t("app_name") %>
           </a> 
         </div> 
         <ul class="nav col-8 col-md-auto mb-2 justify-content-center mb-md-0"> 
           <%# <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li> %>
         </ul> 
         <div class="col-md-3 text-end">
-          <%= link_to "Add item", new_catalog_path, class: "btn btn-primary" %>
+          <%= link_to I18n.t("add_item"), new_catalog_path, class: "btn btn-primary" %>
         </div>
         <div class="col-md-1 mb-2 mb-md-0"></div>
     </header>

@@ -1,0 +1,20 @@
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+// Перевизначення стилів для сумісності Ant Design та Bootstrap
+.card {
+  margin-bottom: 1rem;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+// Додаткові стилі для кращої інтеграції
+.ant-card {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
