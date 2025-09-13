@@ -1,8 +1,10 @@
 import React from 'react'
+import I18n from 'i18n-js';
 import { Card, Typography, Divider, Row, Col, Tag } from 'antd'
 import { ShoppingCartOutlined, DollarOutlined } from '@ant-design/icons'
+import { catalog_path } from '../routes';
 
-const { Title, Text } = Typography
+const { Title, Text, Link } = Typography
 
 const CatalogCard = ({ catalog }) => {
   return (
@@ -10,9 +12,11 @@ const CatalogCard = ({ catalog }) => {
       className="mb-3"
       title={
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Title level={5} style={{ margin: 0 }}>
-            {catalog.product_name}
-          </Title>
+          <Link href={catalog_path(catalog.id)}>
+            <Title level={5} style={{ margin: 0 }}>
+              {catalog.product_name}
+            </Title>
+          </Link>
           <Text type="secondary">{catalog.created_at}</Text>
         </div>
       }
@@ -25,14 +29,14 @@ const CatalogCard = ({ catalog }) => {
         <Col span={12}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <DollarOutlined />
-            <Text strong>Ціна:</Text>
+            <Text strong>`${I18n.t('catalog.price')}:`</Text>
             <Tag color="blue">{`${catalog.price} ${catalog.currency}`}</Tag>
           </div>
         </Col>
         <Col span={12}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <ShoppingCartOutlined />
-            <Text strong>Кількість:</Text>
+            <Text strong>`${I18n.t('catalog.quantity')}:`</Text>
             <Tag color="green">{catalog.quantity}</Tag>
           </div>
         </Col>

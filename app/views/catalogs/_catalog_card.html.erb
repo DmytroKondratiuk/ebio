@@ -1,10 +1,11 @@
 <div id="<%= dom_id catalog %>" data-react-component="CatalogCard" 
      data-props="<%= {
-       product_name: catalog.product_name,
-       description: catalog.description,
-       price: catalog.price,
-       currency: catalog.currency,
-       quantity: catalog.quantity,
-       created_at: catalog.created_at.to_s
+        id: catalog.id,
+        product_name: catalog.product_name,
+        description: catalog.description,
+        price: catalog.price,
+        currency: catalog.currency,
+        quantity: catalog.quantity,
+        created_at: catalog.created_at.to_s
      }.to_json %>">
 </div>
