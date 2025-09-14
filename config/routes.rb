@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   root "catalogs#index"
 
   resources :catalogs
+
+  get "log_as_admin", to: "application#log_as_admin"
 end

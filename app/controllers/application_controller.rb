@@ -7,7 +7,13 @@ class ApplicationController < ActionController::Base
 
   helper_method :admin_signed_in?
 
-  before_action :authenticate, only: %i[destroy edit]
+  # before_action :authenticate, only: %i[destroy edit]
+
+  def log_as_admin
+    authenticate
+
+    redirect_back(fallback_location: root_path)
+  end
 
   private
 
@@ -20,7 +26,7 @@ class ApplicationController < ActionController::Base
     def admin_signed_in?
       return false unless request.authorization
 
-      username, password = ActionController::HttpAuthentication::Basic.decode_credentials(request).split(':')
+      username, password = ActionController::HttpAuthentication::Basic.decode_credentials(request).split(":")
       username == USERNAME && password == PASSWORD
     end
 end

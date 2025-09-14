@@ -36,7 +36,13 @@
           </li>
         </ul> 
         <div class="col-md-3 text-end">
-          <%= link_to I18n.t("add_item"), new_catalog_path, class: "btn btn-primary" %>
+          <%= link_to I18n.t("add_item"), new_catalog_path, class: "btn btn-primary me-2" %>
+
+          <% unless admin_signed_in? %>
+            <%= link_to log_as_admin_path do %>
+              <i class="bi bi-door-open"></i>
+            <% end %>
+          <% end %>
         </div>
         <div class="col-md-1 mb-2 mb-md-0"></div>
     </header>

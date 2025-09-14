@@ -1,5 +1,6 @@
 class CatalogsController < ApplicationController
   before_action :set_catalog, only: %i[show edit update destroy]
+  before_action :authenticate, only: %i[destroy edit]
 
   # GET /catalogs or /catalogs.json
   def index
