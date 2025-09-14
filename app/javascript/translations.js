@@ -1,285 +1,63 @@
 export default {
   "en": {
-    "date": {
-      "formats": {
-        "default": "%Y-%m-%d",
-        "short": "%b %d",
-        "long": "%B %d, %Y"
-      },
-      "day_names": [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "abbr_day_names": [
-        "Sun",
-        "Mon",
-        "Tue",
-        "Wed",
-        "Thu",
-        "Fri",
-        "Sat"
-      ],
-      "month_names": [
-        null,
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ],
-      "abbr_month_names": [
-        null,
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec"
-      ],
-      "order": [
-        "year",
-        "month",
-        "day"
-      ]
-    },
-    "time": {
-      "formats": {
-        "default": "%a, %d %b %Y %H:%M:%S %z",
-        "short": "%d %b %H:%M",
-        "long": "%B %d, %Y %H:%M"
-      },
-      "am": "am",
-      "pm": "pm"
-    },
-    "support": {
-      "array": {
-        "words_connector": ", ",
-        "two_words_connector": " and ",
-        "last_word_connector": ", and "
-      }
-    },
-    "number": {
-      "format": {
-        "separator": ".",
-        "delimiter": ",",
-        "precision": 3,
-        "round_mode": "default",
-        "significant": false,
-        "strip_insignificant_zeros": false
-      },
-      "currency": {
-        "format": {
-          "format": "%u%n",
-          "negative_format": "-%u%n",
-          "unit": "$",
-          "separator": ".",
-          "delimiter": ",",
-          "precision": 2,
-          "significant": false,
-          "strip_insignificant_zeros": false
-        }
-      },
-      "percentage": {
-        "format": {
-          "delimiter": "",
-          "format": "%n%"
-        }
-      },
-      "precision": {
-        "format": {
-          "delimiter": ""
-        }
-      },
-      "human": {
-        "format": {
-          "delimiter": "",
-          "precision": 3,
-          "significant": true,
-          "strip_insignificant_zeros": true
-        },
-        "storage_units": {
-          "format": "%n %u",
-          "units": {
-            "byte": {
-              "one": "Byte",
-              "other": "Bytes"
-            },
-            "kb": "KB",
-            "mb": "MB",
-            "gb": "GB",
-            "tb": "TB",
-            "pb": "PB",
-            "eb": "EB",
-            "zb": "ZB"
-          }
-        },
-        "decimal_units": {
-          "format": "%n %u",
-          "units": {
-            "unit": "",
-            "thousand": "Thousand",
-            "million": "Million",
-            "billion": "Billion",
-            "trillion": "Trillion",
-            "quadrillion": "Quadrillion"
-          }
-        }
-      },
-      "nth": {
-        "ordinals": "#<Proc:0x00000001267ed0c0 /Users/dmytro/.rbenv/versions/3.3.0/lib/ruby/gems/3.3.0/gems/activesupport-8.0.2.1/lib/active_support/locale/en.rb:7 (lambda)>",
-        "ordinalized": "#<Proc:0x00000001267ed098 /Users/dmytro/.rbenv/versions/3.3.0/lib/ruby/gems/3.3.0/gems/activesupport-8.0.2.1/lib/active_support/locale/en.rb:26 (lambda)>"
-      }
-    },
-    "errors": {
-      "format": "%{attribute} %{message}",
-      "messages": {
-        "model_invalid": "Validation failed: %{errors}",
-        "inclusion": "is not included in the list",
-        "exclusion": "is reserved",
-        "invalid": "is invalid",
-        "confirmation": "doesn't match %{attribute}",
-        "accepted": "must be accepted",
-        "empty": "can't be empty",
-        "blank": "can't be blank",
-        "present": "must be blank",
-        "too_long": {
-          "one": "is too long (maximum is 1 character)",
-          "other": "is too long (maximum is %{count} characters)"
-        },
-        "password_too_long": "is too long",
-        "too_short": {
-          "one": "is too short (minimum is 1 character)",
-          "other": "is too short (minimum is %{count} characters)"
-        },
-        "wrong_length": {
-          "one": "is the wrong length (should be 1 character)",
-          "other": "is the wrong length (should be %{count} characters)"
-        },
-        "not_a_number": "is not a number",
-        "not_an_integer": "must be an integer",
-        "greater_than": "must be greater than %{count}",
-        "greater_than_or_equal_to": "must be greater than or equal to %{count}",
-        "equal_to": "must be equal to %{count}",
-        "less_than": "must be less than %{count}",
-        "less_than_or_equal_to": "must be less than or equal to %{count}",
-        "other_than": "must be other than %{count}",
-        "in": "must be in %{count}",
-        "odd": "must be odd",
-        "even": "must be even",
-        "required": "must exist",
-        "taken": "has already been taken"
-      },
-      "unavailable_session": "Session %{id} is no longer available in memory.\n\nIf you happen to run on a multi-process server (like Unicorn or Puma) the process\nthis request hit doesn't store %{id} in memory. Consider turning the number of\nprocesses/workers to one (1) or using a different server in development.\n",
-      "unacceptable_request": "A supported version is expected in the Accept header.\n",
-      "connection_refused": "Oops! Failed to connect to the Web Console middleware.\nPlease make sure a rails development server is running.\n"
-    },
-    "activerecord": {
-      "errors": {
-        "messages": {
-          "record_invalid": "Validation failed: %{errors}",
-          "restrict_dependent_destroy": {
-            "has_one": "Cannot delete record because a dependent %{record} exists",
-            "has_many": "Cannot delete record because dependent %{record} exist"
-          }
-        }
-      }
-    },
-    "datetime": {
-      "distance_in_words": {
-        "half_a_minute": "half a minute",
-        "less_than_x_seconds": {
-          "one": "less than 1 second",
-          "other": "less than %{count} seconds"
-        },
-        "x_seconds": {
-          "one": "1 second",
-          "other": "%{count} seconds"
-        },
-        "less_than_x_minutes": {
-          "one": "less than a minute",
-          "other": "less than %{count} minutes"
-        },
-        "x_minutes": {
-          "one": "1 minute",
-          "other": "%{count} minutes"
-        },
-        "about_x_hours": {
-          "one": "about 1 hour",
-          "other": "about %{count} hours"
-        },
-        "x_days": {
-          "one": "1 day",
-          "other": "%{count} days"
-        },
-        "about_x_months": {
-          "one": "about 1 month",
-          "other": "about %{count} months"
-        },
-        "x_months": {
-          "one": "1 month",
-          "other": "%{count} months"
-        },
-        "about_x_years": {
-          "one": "about 1 year",
-          "other": "about %{count} years"
-        },
-        "over_x_years": {
-          "one": "over 1 year",
-          "other": "over %{count} years"
-        },
-        "almost_x_years": {
-          "one": "almost 1 year",
-          "other": "almost %{count} years"
-        }
-      },
-      "prompts": {
-        "year": "Year",
-        "month": "Month",
-        "day": "Day",
-        "hour": "Hour",
-        "minute": "Minute",
-        "second": "Seconds"
-      }
-    },
-    "helpers": {
-      "select": {
-        "prompt": "Please select"
-      },
-      "submit": {
-        "create": "Create %{model}",
-        "update": "Update %{model}",
-        "submit": "Save %{model}"
-      }
-    },
     "app_name": "eBio",
     "add_item": "Add item",
     "catalogs": {
       "title": "Items list",
+      "name": "Resources caatalog",
+      "edit_item": "Edit %{name}",
+      "created": "Item was successfully created.",
+      "updated": "Item was successfully updated.",
+      "destroyed": "Item was successfully destroyed.",
       "fields": {
         "price": "Price",
         "quantity": "Quantity"
       },
-      "create": "Item was successfully created.",
-      "update": "Item was successfully updated.",
-      "destroy": "Item was successfully destroyed."
+      "new": {
+        "title": "New catalog item"
+      },
+      "actions": {
+        "back_to_catalogs": "Back to catalogs",
+        "show_catalog_item": "Show",
+        "save": "Save",
+        "delete": "Delete"
+      },
+      "attributes": {
+        "product_name": "Product Name",
+        "price": "Price",
+        "quantity": "Quantity",
+        "description": "Description",
+        "user_name": "User Name",
+        "email": "Email",
+        "phone": "Phone",
+        "country": "Country",
+        "region": "Region",
+        "city": "City",
+        "product_category": "Product Category",
+        "currency": "Currency",
+        "active": "Active",
+        "created_at": "Created at"
+      },
+      "product_categories": {
+        "vegetable": "Vegetable",
+        "animal": "Animal",
+        "microbiological": "Microbiological",
+        "organic": "Organic",
+        "energy": "Energy",
+        "raw_materials": "Raw Materials",
+        "food": "Food",
+        "feed": "Feed",
+        "other": "Other"
+      },
+      "currency": {
+        "usd": "USD",
+        "eur": "EUR",
+        "gbp": "GBP",
+        "uah": "UAH"
+      },
+      "filters": {
+        "title": "Filters"
+      }
     }
   },
   "uk": {
@@ -287,13 +65,60 @@ export default {
     "add_item": "Додати позицію",
     "catalogs": {
       "title": "Перелік позицій",
+      "name": "Каталог ресурсів",
+      "edit_item": "Редагувати %{name}",
+      "created": "Позиція успішно створена.",
+      "updated": "Позиція успішно оновлена.",
+      "destroy": "Позиція успішно видалена.",
       "fields": {
         "price": "Ціна",
         "quantity": "Кількість"
       },
-      "create": "Позиція успішно створена.",
-      "update": "Позиція успішно оновлена.",
-      "destroy": "Позиція успішно видалена."
+      "new": {
+        "title": "Нова позиція каталогу"
+      },
+      "actions": {
+        "back_to_catalogs": "Повернутися до каталогу",
+        "show_catalog_item": "Переглянути",
+        "save": "Зберегти",
+        "delete": "Видалити"
+      },
+      "attributes": {
+        "product_name": "Назва продукту",
+        "price": "Ціна",
+        "quantity": "Кількість",
+        "description": "Опис",
+        "user_name": "Ім'я контактної особи",
+        "email": "Електронна пошта",
+        "phone": "Телефон",
+        "country": "Країна",
+        "region": "Область",
+        "city": "Місто",
+        "product_category": "Категорія продукту",
+        "currency": "Валюта",
+        "active": "Активний",
+        "created_at": "Створено"
+      },
+      "product_categories": {
+        "vegetable": "Рослинна",
+        "animal": "Тваринна",
+        "microbiological": "Мікробіологічна",
+        "organic": "Органічна",
+        "energy": "Енергетична",
+        "raw_materials": "Сировина",
+        "food": "Харчова",
+        "feed": "Кормова",
+        "other": "Інша"
+      },
+      "currency": {
+        "usd": "USD",
+        "eur": "EUR",
+        "gbp": "GBP",
+        "uah": "UAH"
+      },
+      "filters": {
+        "title": "Фільтри"
+      }
     }
   }
 };

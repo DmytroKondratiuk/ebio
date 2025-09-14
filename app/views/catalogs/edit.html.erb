@@ -1,12 +1,28 @@
 <% content_for :title, "Editing catalog" %>
 
-<h1>Editing catalog</h1>
+<div class="d-flex justify-content-end">
+  <%=
+    link_to I18n.t("catalogs.actions.back_to_catalogs"),
+    catalogs_path, 
+    class: "btn btn-outline-secondary btn-sm me-2" 
+  %>
+
+  <%=
+    link_to I18n.t("catalogs.actions.show_catalog_item"),
+    @catalog, 
+    class: "btn btn-outline-primary btn-sm me-2" 
+  %>
+
+  <%=
+    link_to I18n.t("catalogs.actions.delete"),
+    @catalog,
+    method: :delete,
+    class: "btn btn-danger btn-sm"
+  %>
+</div>
+
+<h1><%= I18n.t("catalogs.edit_item", name: @catalog.product_name) %></h1>
+
+<hr />
 
 <%= render "form", catalog: @catalog %>
-
-<br>
-
-<div>
-  <%= link_to "Show this catalog", @catalog %> |
-  <%= link_to "Back to catalogs", catalogs_path %>
-</div>

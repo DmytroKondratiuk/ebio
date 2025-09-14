@@ -4,10 +4,58 @@ uk:
 
   catalogs:
     title: Перелік позицій
+    name: Каталог ресурсів
+    edit_item: Редагувати %{name}
+
+    created: Позиція успішно створена.
+    updated: Позиція успішно оновлена.
+    destroy: Позиція успішно видалена.
+
     fields:
       price: Ціна
       quantity: Кількість
 
-    create: Позиція успішно створена.
-    update: Позиція успішно оновлена.
-    destroy: Позиція успішно видалена.
+    new:
+      title: Нова позиція каталогу
+
+    actions:
+      back_to_catalogs: Повернутися до каталогу
+      show_catalog_item: Переглянути
+      save: Зберегти
+      delete: Видалити
+
+    attributes:
+      product_name: Назва продукту
+      price: Ціна
+      quantity: Кількість
+      description: Опис
+      user_name: Ім'я контактної особи
+      email: Електронна пошта
+      phone: Телефон
+      country: Країна
+      region: Область
+      city: Місто
+      product_category: Категорія продукту
+      currency: Валюта
+      active: Активний
+      created_at: Створено
+
+    product_categories:
+      vegetable: Рослинна
+      animal: Тваринна
+      microbiological: Мікробіологічна
+      organic: Органічна
+      energy: Енергетична
+      raw_materials: Сировина
+      food: Харчова
+      feed: Кормова
+      other: Інша
+    
+    currency:
+      usd: USD
+      eur: EUR
+      gbp: GBP
+      uah: UAH
+
+    filters:
+      title: Фільтри
