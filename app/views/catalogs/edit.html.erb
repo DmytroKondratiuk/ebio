@@ -13,12 +13,14 @@
     class: "btn btn-outline-primary btn-sm me-2" 
   %>
 
-  <%=
-    button_to I18n.t("catalogs.actions.delete"),
-    @catalog,
-    method: :delete,
-    class: "btn btn-danger btn-sm"
-  %>
+  <% if admin_signed_in? %>
+    <%=
+      button_to I18n.t("catalogs.actions.delete"),
+      @catalog,
+      method: :delete,
+      class: "btn btn-danger btn-sm"
+    %>
+  <% end %>
 </div>
 
 <h1><%= I18n.t("catalogs.edit_item", name: @catalog.product_name) %></h1>

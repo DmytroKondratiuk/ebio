@@ -4,7 +4,7 @@ class CatalogsController < ApplicationController
 
   # GET /catalogs or /catalogs.json
   def index
-    @catalogs = Catalog.where(active: true).all
+    @catalogs = admin_signed_in? ? Catalog.all : Catalog.where(active: true).all
   end
 
   # GET /catalogs/1 or /catalogs/1.json

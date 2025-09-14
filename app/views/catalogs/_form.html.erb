@@ -53,7 +53,7 @@
         form.select :product_category, 
           Catalog::PRODUCT_CATEGORY_LIST.map { |category| [I18n.t("catalogs.product_categories.#{category}"), category] }, 
           { prompt: false }, 
-          class: "form-control" 
+          class: "form-select" 
       %>
     </div>
 
@@ -68,7 +68,7 @@
         form.select :currency, 
           Catalog::CURRENCY_LIST.map { |currency| [I18n.t("catalogs.currency.#{currency}"), currency] }, 
           { prompt: false }, 
-          class: "form-control" 
+          class: "form-select" 
       %>
     </div>
 
@@ -81,6 +81,13 @@
       <%= form.label :description, I18n.t("catalogs.attributes.description"), class: "form-label" %>
       <%= form.text_area :description, class: "form-control", rows: 5 %>
     </div>
+
+    <% if admin_signed_in? %>
+      <div class="mb-3">
+        <%= form.label :active, I18n.t("catalogs.attributes.active"), class: "form-label" %>
+        <%= form.check_box :active, class: "form-check-input" %>
+      </div>
+    <% end %>
   </div>
 
   <div>
