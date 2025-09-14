@@ -16,12 +16,15 @@ I18n.translations["en"] = I18n.extend((I18n.translations["en"] || {}), {
   "catalogs": {
     "actions": {
       "back_to_catalogs": "Back to catalogs",
-      "save": "Save"
+      "delete": "Delete",
+      "save": "Save",
+      "show_catalog_item": "Show"
     },
     "attributes": {
       "active": "Active",
       "city": "City",
       "country": "Country",
+      "created_at": "Created at",
       "currency": "Currency",
       "description": "Description",
       "email": "Email",
@@ -33,14 +36,16 @@ I18n.translations["en"] = I18n.extend((I18n.translations["en"] || {}), {
       "region": "Region",
       "user_name": "User Name"
     },
-    "create": "Item was successfully created.",
+    "created": "Item was successfully created.",
     "currency": {
       "eur": "EUR",
       "gbp": "GBP",
       "uah": "UAH",
       "usd": "USD"
     },
-    "destroy": "Item was successfully destroyed.",
+    "destroy": "Позиція успішно видалена.",
+    "destroyed": "Item was successfully destroyed.",
+    "edit_item": "Edit %{name}",
     "fields": {
       "price": "Price",
       "quantity": "Quantity"
@@ -64,7 +69,7 @@ I18n.translations["en"] = I18n.extend((I18n.translations["en"] || {}), {
       "vegetable": "Vegetable"
     },
     "title": "Items list",
-    "update": "Item was successfully updated."
+    "updated": "Item was successfully updated."
   },
   "date": {
     "abbr_day_names": [
@@ -328,12 +333,15 @@ I18n.translations["uk"] = I18n.extend((I18n.translations["uk"] || {}), {
   "catalogs": {
     "actions": {
       "back_to_catalogs": "Повернутися до каталогу",
-      "save": "Зберегти"
+      "delete": "Видалити",
+      "save": "Зберегти",
+      "show_catalog_item": "Переглянути"
     },
     "attributes": {
       "active": "Активний",
       "city": "Місто",
       "country": "Країна",
+      "created_at": "Створено",
       "currency": "Валюта",
       "description": "Опис",
       "email": "Електронна пошта",
@@ -345,7 +353,7 @@ I18n.translations["uk"] = I18n.extend((I18n.translations["uk"] || {}), {
       "region": "Область",
       "user_name": "Ім'я контактної особи"
     },
-    "create": "Позиція успішно створена.",
+    "created": "Позиція успішно створена.",
     "currency": {
       "eur": "EUR",
       "gbp": "GBP",
@@ -353,6 +361,7 @@ I18n.translations["uk"] = I18n.extend((I18n.translations["uk"] || {}), {
       "usd": "USD"
     },
     "destroy": "Позиція успішно видалена.",
+    "edit_item": "Редагувати %{name}",
     "fields": {
       "price": "Ціна",
       "quantity": "Кількість"
@@ -376,6 +385,6 @@ I18n.translations["uk"] = I18n.extend((I18n.translations["uk"] || {}), {
       "vegetable": "Рослинна"
     },
     "title": "Перелік позицій",
-    "update": "Позиція успішно оновлена."
+    "updated": "Позиція успішно оновлена."
   }
 });
