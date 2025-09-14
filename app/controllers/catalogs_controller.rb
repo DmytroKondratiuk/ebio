@@ -23,6 +23,7 @@ class CatalogsController < ApplicationController
   def create
     @catalog = Catalog.new(catalog_params)
 
+
     respond_to do |format|
       if @catalog.save
         format.html { redirect_to @catalog, notice: I18n.t("catalogs.created"), status: :see_other }
@@ -58,13 +59,16 @@ class CatalogsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_catalog
       @catalog = Catalog.find(params.expect(:id))
     end
 
-    # Only allow a list of trusted parameters through.
     def catalog_params
-      params.fetch(:catalog, {})
+      params.expect(
+      catalog: %i[
+        id user_name email phone country region city product_name description
+        product_category quantity price currency active
+      ]
+    )
     end
 end

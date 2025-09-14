@@ -1,7 +1,6 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-/* Перевизначення стилів Ant Design для сумісності з Bootstrap */
 .ant-card {
   margin-bottom: 1rem;
 }
@@ -11,7 +10,6 @@
   margin: 0 auto;
 }
 
-/* Забезпечення правильних відступів у сітці */
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;

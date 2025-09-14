@@ -7,6 +7,7 @@ import * as bootstrap from "bootstrap"
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import CatalogCard from './components/CatalogCard'
+import CatalogItemDetails from './components/CatalogItemDetails'
 
 // Ant Design
 import 'antd/dist/reset.css'
@@ -21,6 +22,9 @@ document.addEventListener('turbo:load', () => {
     let component
     if (componentName === 'CatalogCard') {
       component = <CatalogCard catalog={props} />
+    }
+    if (componentName === 'CatalogItemDetails') {
+      component = <CatalogItemDetails catalog={props} />
     }
 
     if (component) {

@@ -11,7 +11,79 @@
     </div>
   <% end %>
 
+<div class="col-12 col-lg-6">
+    <div class="mb-3">
+      <%= form.label :user_name, "#{I18n.t("catalogs.attributes.user_name")} <span class='text-danger'>*</span>".html_safe, class: "form-label" %>
+      <%= form.text_field :user_name, class: "form-control", required: true %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :email, "#{I18n.t("catalogs.attributes.email")} <span class='text-danger'>*</span>".html_safe, class: "form-label" %>
+      <%= form.email_field :email, class: "form-control", required: true %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :phone, "#{I18n.t("catalogs.attributes.phone")} <span class='text-danger'>*</span>".html_safe, class: "form-label" %>
+      <%= form.telephone_field :phone, class: "form-control", required: true %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :country, "#{I18n.t("catalogs.attributes.country")} <span class='text-danger'>*</span>".html_safe, class: "form-label" %>
+      <%= form.text_field :country, class: "form-control", required: true %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :region, I18n.t("catalogs.attributes.region"), class: "form-label" %>
+      <%= form.text_field :region, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :city, I18n.t("catalogs.attributes.city"), class: "form-label" %>
+      <%= form.text_field :city, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :product_name, "#{I18n.t("catalogs.attributes.product_name")} <span class='text-danger'>*</span>".html_safe, class: "form-label" %>
+      <%= form.text_field :product_name, class: "form-control", required: true %>
+    </div>
+    
+    <div class="mb-3">
+      <%= form.label :product_category, I18n.t("catalogs.attributes.product_category"), class: "form-label" %>
+      <%= 
+        form.select :product_category, 
+          Catalog::PRODUCT_CATEGORY_LIST.map { |category| [I18n.t("catalogs.product_categories.#{category}"), category] }, 
+          { prompt: false }, 
+          class: "form-control" 
+      %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :price, I18n.t("catalogs.attributes.price"), class: "form-label" %>
+      <%= form.number_field :price, class: "form-control", step: 0.01 %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :currency, I18n.t("catalogs.attributes.currency"), class: "form-label" %>
+      <%= 
+        form.select :currency, 
+          Catalog::CURRENCY_LIST.map { |currency| [I18n.t("catalogs.currency.#{currency}"), currency] }, 
+          { prompt: false }, 
+          class: "form-control" 
+      %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :quantity, I18n.t("catalogs.attributes.quantity"), class: "form-label" %>
+      <%= form.number_field :quantity, class: "form-control", step: 1 %>
+      </div>
+
+    <div class="mb-3">
+      <%= form.label :description, I18n.t("catalogs.attributes.description"), class: "form-label" %>
+      <%= form.text_area :description, class: "form-control", rows: 5 %>
+    </div>
+  </div>
+
   <div>
-    <%= form.submit %>
+    <%= form.submit I18n.t("catalogs.actions.save"), class: "btn btn-primary" %>
   </div>
 <% end %>

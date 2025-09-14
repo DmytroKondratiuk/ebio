@@ -4,10 +4,58 @@ en:
 
   catalogs:
     title: Items list
+    name: Resources caatalog
+    edit_item: Edit %{name}
+    
+    created: Item was successfully created.
+    updated: Item was successfully updated.
+    destroyed: Item was successfully destroyed.
+
     fields:
       price: Price
       quantity: Quantity
 
-    create: Item was successfully created.
-    update: Item was successfully updated.
-    destroy: Item was successfully destroyed.
+    new:
+      title: New catalog item
+
+    actions:
+      back_to_catalogs: Back to catalogs
+      show_catalog_item: Show
+      save: Save
+      delete: Delete
+
+    attributes:
+      product_name: Product Name
+      price: Price
+      quantity: Quantity
+      description: Description
+      user_name: User Name
+      email: Email
+      phone: Phone
+      country: Country
+      region: Region
+      city: City
+      product_category: Product Category
+      currency: Currency
+      active: Active
+      created_at: Created at
+
+    product_categories:
+      vegetable: Vegetable
+      animal: Animal
+      microbiological: Microbiological
+      organic: Organic
+      energy: Energy
+      raw_materials: Raw Materials
+      food: Food
+      feed: Feed
+      other: Other
+    
+    currency:
+      usd: USD
+      eur: EUR
+      gbp: GBP
+      uah: UAH
+
+    filters:
+      title: Filters
