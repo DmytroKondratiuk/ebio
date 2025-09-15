@@ -83,6 +83,12 @@ production:
   url: <%= ENV["DATABASE_URL"] %>
   sslmode: require
 
+  cache:
+    <<: *production
+
+  queue:
+    <<: *production
+
   cable:
     <<: *production
 
