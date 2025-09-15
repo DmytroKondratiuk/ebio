@@ -79,20 +79,23 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  primary: &primary_production
-    <<: *default
-    database: ebio_production
-    username: ebio
-    password: <%= ENV["EBIO_DATABASE_PASSWORD"] %>
-  cache:
-    <<: *primary_production
-    database: ebio_production_cache
-    migrations_paths: db/cache_migrate
-  queue:
-    <<: *primary_production
-    database: ebio_production_queue
-    migrations_paths: db/queue_migrate
-  cable:
-    <<: *primary_production
-    database: ebio_production_cable
-    migrations_paths: db/cable_migrate
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
+  sslmode: require
+  # primary: &primary_production
+  #   <<: *default
+  #   database: ebio_production
+  #   username: ebio
+  #   password: <%= ENV["EBIO_DATABASE_PASSWORD"] %>
+  # cache:
+  #   <<: *primary_production
+  #   database: ebio_production_cache
+  #   migrations_paths: db/cache_migrate
+  # queue:
+  #   <<: *primary_production
+  #   database: ebio_production_queue
+  #   migrations_paths: db/queue_migrate
+  # cable:
+  #   <<: *primary_production
+  #   database: ebio_production_cable
+  #   migrations_paths: db/cable_migrate
