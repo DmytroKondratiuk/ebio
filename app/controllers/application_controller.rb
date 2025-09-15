@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   # before_action :authenticate, only: %i[destroy edit]
 
   def log_as_admin
-    authenticate
+    return unless authenticate
 
     redirect_back(fallback_location: root_path)
   end
