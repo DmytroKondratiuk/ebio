@@ -84,13 +84,19 @@ production:
   sslmode: require
 
   cache:
-    <<: *production
+    <<: *default
+    url: <%= ENV["DATABASE_URL"] %>
+    sslmode: require
 
   queue:
-    <<: *production
+    <<: *default
+    url: <%= ENV["DATABASE_URL"] %>
+    sslmode: require
 
   cable:
-    <<: *production
+    <<: *default
+    url: <%= ENV["DATABASE_URL"] %>
+    sslmode: require
 
   # primary: &primary_production
   #   <<: *default
