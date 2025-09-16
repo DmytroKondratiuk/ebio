@@ -7,12 +7,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :admin_signed_in?
 
-  # before_action :authenticate, only: %i[destroy edit]
-
   def log_as_admin
-    return unless authenticate
-
-    redirect_back(fallback_location: root_path)
+    authenticate
   end
 
   private
