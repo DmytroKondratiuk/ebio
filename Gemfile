@@ -73,7 +73,7 @@ gem "react-rails", "~> 3.2"
 gem "countries", require: "countries/global"
 
 # https://github.com/fnando/i18n-js
-gem "i18n-js", "~> 3.0"
+gem "i18n-js", "~> 4.2"
 
 # Generates javascript file that defines all Rails named routes as javascript helpers
 # https://github.com/railsware/js-routes
