@@ -27,7 +27,7 @@ const CatalogIndex = ({ catalog_items_data }) => {
         ))}
       </Col>
 
-      {catalog_items_data.length && (
+      {catalog_items_data.length > 0 && (
         <Col
           xs={{ span: 24, order: 1 }}
           sm={{ span: 24, order: 1 }}
