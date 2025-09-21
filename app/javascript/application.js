@@ -8,6 +8,7 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import CatalogCard from './components/CatalogCard'
 import CatalogItemDetails from './components/CatalogItemDetails'
+import CatalogIndex from './components/CatalogIndex'
 
 // Ant Design
 import 'antd/dist/reset.css'
@@ -25,6 +26,9 @@ document.addEventListener('turbo:load', () => {
     }
     if (componentName === 'CatalogItemDetails') {
       component = <CatalogItemDetails catalog={props} />
+    }
+    if (componentName === 'CatalogIndex') {
+      component = <CatalogIndex catalog_items_data={props} />
     }
 
     if (component) {
