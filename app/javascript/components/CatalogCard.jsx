@@ -10,6 +10,7 @@ const { Title, Text, Link } = Typography
 const CatalogCard = ({ catalog }) => {
   return (
     <Card
+      key={catalog.key}
       className="mb-3"
       title={
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

@@ -5,6 +5,8 @@ class CatalogsController < ApplicationController
   # GET /catalogs or /catalogs.json
   def index
     @catalogs = admin_signed_in? ? Catalog.all : Catalog.where(active: true).all
+
+    @catalog_items_data = catalog_items_board.data
   end
 
   # GET /catalogs/1 or /catalogs/1.json
@@ -72,5 +74,11 @@ class CatalogsController < ApplicationController
         product_category quantity price currency active
       ]
     )
+    end
+
+    def catalog_items_board
+      catalog_items = admin_signed_in? ? Catalog.all : Catalog.where(active: true).all
+
+      CatalogItemsBoard.new(catalog_items)
     end
 end

@@ -5,15 +5,10 @@
 <h1><%= I18n.t("catalogs.title") %></h1>
 
 <div id="catalogs">
-  <div class="row">
-    <div class="col">
-      <% @catalogs.each do |catalog| %>
-        <%= render "catalogs/catalog_card", catalog: catalog %>
-      <% end %>
-    </div>
-
-    <div class="col">
-      <h2><%= I18n.t("catalogs.filters.title") %></h2>
-    </div>
+  <div 
+    id="catalog_items_data"
+    data-react-component="CatalogIndex" 
+    data-props='<%= @catalog_items_data.to_json %>'
+  >
   </div>
 </div>
